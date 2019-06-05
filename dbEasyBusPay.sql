@@ -10,10 +10,19 @@ CREATE TABLE tb_user (
 	Master			BIT default(0)
 );
 
+CREATE TABLE tb_linha (
+	IdLinha			INT PRIMARY KEY IDENTITY,
+	NumeroLinha		VARCHAR(4)	 NOT NULL,
+	PontoInicio		VARCHAR(30)	 NOT NULL,
+	PontoFinal		VARCHAR(30)	 NOT NULL,
+	ValorPassagem	MONEY NOT NULL,
+	LinhaAtiva		BIT default(1),
+	Catraca			BIT default(0)
+)
+
 INSERT INTO tb_user (NomeUser, EmailUser, PasswordUser, TipoUser) VALUES ('Admin' , 'admin@admin.com', 'admin', '1');
 
-SELECT * FROM tb_user;
+UPDATE tb_user SET Master = 1 WHERE IdUser = 1;
 
-SELECT IdUser, NomeUser, EmailUser, TipoUser, Master FROM tb_user WHERE EmailUser = 'admin@admin.com' AND PasswordUSer = 'admin';
 
-UPDATE tb_user SET Master = 1 WHERE IdUser = 2;
+SELECT * FROM tb_linha;

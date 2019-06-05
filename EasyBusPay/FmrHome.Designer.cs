@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnNovaLinha = new System.Windows.Forms.Button();
             this.btnAbrirRota = new System.Windows.Forms.Button();
             this.btnGerenciarLinhas = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvLinhasAtivas = new System.Windows.Forms.DataGridView();
             this.lblSubTitle = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLinhasAtivas)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -81,6 +83,7 @@
             this.btnAbrirRota.TabIndex = 2;
             this.btnAbrirRota.Text = "Abrir Rota";
             this.btnAbrirRota.UseVisualStyleBackColor = false;
+            this.btnAbrirRota.Click += new System.EventHandler(this.BtnAbrirRota_Click);
             // 
             // btnGerenciarLinhas
             // 
@@ -99,14 +102,27 @@
             this.btnGerenciarLinhas.Text = "Gerenciar Linhas";
             this.btnGerenciarLinhas.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgvLinhasAtivas
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 69);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1008, 428);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvLinhasAtivas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvLinhasAtivas.ColumnHeadersHeight = 50;
+            this.dgvLinhasAtivas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvLinhasAtivas.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLinhasAtivas.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvLinhasAtivas.Location = new System.Drawing.Point(23, 69);
+            this.dgvLinhasAtivas.Name = "dgvLinhasAtivas";
+            this.dgvLinhasAtivas.RowHeadersWidth = 50;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.dgvLinhasAtivas.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvLinhasAtivas.Size = new System.Drawing.Size(1008, 428);
+            this.dgvLinhasAtivas.TabIndex = 4;
             // 
             // lblSubTitle
             // 
@@ -126,7 +142,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(89)))), ((int)(((byte)(193)))));
             this.ClientSize = new System.Drawing.Size(1055, 617);
             this.Controls.Add(this.lblSubTitle);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvLinhasAtivas);
             this.Controls.Add(this.btnGerenciarLinhas);
             this.Controls.Add(this.btnAbrirRota);
             this.Controls.Add(this.btnNovaLinha);
@@ -139,7 +155,7 @@
             this.Name = "FmrHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Easy Bus Pay | Home";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLinhasAtivas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,7 +167,7 @@
         private System.Windows.Forms.Button btnNovaLinha;
         private System.Windows.Forms.Button btnAbrirRota;
         private System.Windows.Forms.Button btnGerenciarLinhas;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblSubTitle;
+        public System.Windows.Forms.DataGridView dgvLinhasAtivas;
     }
 }

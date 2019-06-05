@@ -53,7 +53,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\ClassAcessoBD.cs" />
+    <Compile Include="Classes\LinhaClass.cs" />
     <Compile Include="Classes\UserClass.cs" />
+    <Compile Include="FmrAbrirLinha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrAbrirLinha.Designer.cs">
+      <DependentUpon>FmrAbrirLinha.cs</DependentUpon>
+    </Compile>
     <Compile Include="FmrHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +81,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FmrAbrirLinha.resx">
+      <DependentUpon>FmrAbrirLinha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FmrHome.resx">
       <DependentUpon>FmrHome.cs</DependentUpon>
     </EmbeddedResource>
